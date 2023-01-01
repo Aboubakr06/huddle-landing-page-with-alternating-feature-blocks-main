@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --clr-primary-300: hsl(322, 100%, 66%);
+
+    --clr-neutral-400: hsl(192, 100%, 9%);
+    --clr-neutral-300: hsl(208, 11%, 55%);
+    --clr-neutral-200: hsl(193, 100%, 96%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+
+    --ff-base: 'Open Sans', sans-serif;
+    --ff-poppins: 'Poppins', sans-serif;
+
+    --fw-bolder: 700;
+    --fw-bold: 600;
+    --fw-regular: 400;
+}
+
+/*
+  CSS RESET
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+/***********
+   main Css
+************/
+body {
+    --header-padding: 2rem 1rem;
+    --main-padding: 4rem 1rem 10rem;
+    --section-padding: 4rem 2rem;
+    --footer-padding: 8rem 1rem 3rem;
+    --margin: 4rem;
+
+    font-family: var(--ff-base);
+    font-weight: var(--fw-regular);
+    font-size: 0.875rem;
+    text-align: center;
+    color: var(--clr-neutral-300);
+    background-color: var(--clr-neutral-100);
+
+    display: grid;
+}
+
+.header {
+    display: grid;
+    gap: 2rem;
+    color: var(--clr-neutral-400);
+    padding: var(--header-padding);
+    margin-bottom: var(--margin-bottom);
+    background-color: var(--clr-neutral-200);
+    background-image: url("images/bg-hero-mobile.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header__flex-1 ,.header__flex-1 div{
+    display: grid;
+    place-items: center;
+    gap: 2rem;
+}
+.header img{
+    width: 8rem;
+}
+
+.header__flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: var(--margin);
+    gap: 1rem;
+}
+
+.header__flex .header__try {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-neutral-400);
+    border: 0.1em solid var(--clr-primary-600);
+    border-radius: 2rem;
+    padding: 0.5em 2.5em;
+    font-weight: var(--fw-bold);
+    background-color: var(--clr-neutral-100);
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+h1,
+h2{
+    color: var(--clr-neutral-400);
+    font-family: var(--ff-poppins);
+    font-weight: var(--fw-bold);
+}
+
+.header p {
+    font-size: 1.08rem;
+}
+.get-started {
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-neutral-200);
+    border: 0.1em solid var(--clr-primary-600);
+    border-radius: 2rem;
+    padding: 0.75em 2em;
+    font-weight: var(--fw-bold);
+    background-color: var(--clr-primary-300);
+    min-width: 70%;
+}
+
+.header__flex-1 img {
+    min-width: 18rem;
+}
+
+.main {
+    display: grid;
+    padding: var(--main-padding);
+    gap: 2rem;
+    place-items: center;
+    position: relative;
+}
+
+.section {
+    --section-margin: 2rem;
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    border: 1px solid var(--clr-neutral-100);
+    background-color: var(--clr-neutral-100);
+    border-radius: 1rem;
+    box-shadow: 0em 0.5em 1em var(--clr-neutral-300);
+    padding: var(--section-padding);
+}
+
+.section div {
+    display: grid;
+    gap: 1rem;
+}
+
+.section img{
+    min-width: 15rem;
+    margin-bottom: var(--section-margin);
+}
+
+.section-join {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0em -0.1em 1em var(--clr-neutral-300);
+    width: 90%;
+    padding: 2rem 1rem;
+}
+
+.section-join h2{
+    font-size: 1rem;
+}
+
+
+.footer {
+    display: grid;
+    gap: 2rem;
+    padding: var(--footer-padding);
+    text-align: start;
+    color: var(--clr-neutral-100);
+    font-family: var(--ff-poppins);
+    background-color: var(--clr-neutral-400);
+    
+}
+
+.footer .logo{
+    width: 10rem;
+}
+
+.footer ul{
+    display: grid;
+    gap: 2rem;
+}
+
+.footer ul li{
+    display: grid;
+    gap: 1rem;
+   
+}
+.footer a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--clr-neutral-100);
+    font-size: 1rem;
+}
+
+.footer a:hover {
+    color: var(--clr-primary-300);
+}
+
+.footer .location {
+    align-items: start;
+}
+
+.footer .footer__social{
+    display: flex;
+    place-self: center;
+}
+
+.footer__social a{
+    font-size: 2.5rem;
+}
+
+.footer p {
+    place-self: center;
+}
+
+@media (min-width:55em) {
+
+    body {
+    --header-padding: 2rem 4rem 4rem;
+    --main-padding: 8rem 1rem 15rem;
+    --section-padding: 4rem 6rem;
+    --footer-padding: 12rem 8rem 3rem 6rem; 
+    --margin: 1rem;
+    }
+
+    .header {
+        background-image: url("images/bg-hero-desktop.svg");
+    }
+
+    .header__flex-1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "a b";
+        text-align: start;
+    }
+
+    .header__flex-1 >:nth-child(1) {
+        grid-area: a;
+    }
+
+    .header__info {
+        display: grid;
+        width: 35rem;
+    }
+
+    .header__info h1{
+        font-size: 2.5rem;
+    }
+
+    .header__info .get-started{
+        place-self: start;
+        min-width: 50%;
+        place-items: start;
+    }
+
+    .header__flex-1 img{
+        min-width: 35rem;
+    }
+
+    .flex-right {
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "a b";
+    }
+
+    .flex-right > :nth-child(1) {
+        grid-area: b;
+    }
+
+    .section {
+        --section-margin : 0rem;
+        place-content: center;
+        text-align: start;
+        width: 90%;
+    }
+
+    .section div{
+        width: 100%;
+    }
+    .section img {
+        width: 40%;
+    }
+
+    .flex-left {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .section-join{
+       max-width: 50%;
+       gap: 2rem;
+       padding: 3rem 2rem;
+    }
+
+    .section-join h2{
+        font-size: 2rem;
+     }
+
+     .section-join .get-started{
+        padding: 1.2em;
+     }
+
+     .footer .logo {
+        width: 15rem;
+     }
+
+     .footer ul{
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+     }
+
+     .footer .location {
+        max-width: 25rem;
+     }
+
+     .footer p {
+        place-self: end;
+    }
+}
